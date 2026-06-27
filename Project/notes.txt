@@ -3,3 +3,5 @@
 2> npm install -D typescript -> will add the typescript as a dev dependency in package.json file.
 
 3> npx tsc --init -> This will generate a ts config file.
+
+4> if start script is iniatilized("dev": "tsc -w -p tsconfig.json") in the package.json -> then run npm run dev to generate a dist folder which converts the filename.ts files to same filename.js type inside the dist! 
