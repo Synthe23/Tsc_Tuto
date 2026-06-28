@@ -4,7 +4,7 @@ let title: string = "ts_tutorial";
 // but if we want something which can be a string or a undefined then we shall write:
 let subtitle: string | undefined = "omm"; // this is completely valid !
 
-// void: fucntion doesn't return a useful value
+// void: function doesn't return a useful value
 function log(msg: string): void {
   console.log(msg);
 }
