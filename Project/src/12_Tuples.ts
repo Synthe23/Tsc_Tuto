@@ -1,0 +1,1 @@
+// tuples - In TypeScript, a tuple is a specialized array with a fixed length and predefined types for each position. 
