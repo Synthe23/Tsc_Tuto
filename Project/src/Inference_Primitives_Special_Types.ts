@@ -20,7 +20,7 @@ console.log(age1);
 
 // Which assignments are valid and which are invalid?
 
-// Solution: let age1: number = 21, age1 = 22, age1 = 22.5 is valid as the datatype of the age is number and also the value assigned is also a number. String age1 it is invalid.
+// Solution: let age1: number = 21, age1 = 22, age1 = 22.5 is valid as the datatype of the age is number and also the value assigned is also a number. String age1 it is invalid. Ts doesn't have int float amd double datatype like other languages it simply has number data-type only.
 
 
 
@@ -35,6 +35,7 @@ console.log("name1 datatype: ",typeof name1, "\nage2 datatype: ", typeof age2);
 
 // Solution:
 // ts inferred string incase of name1 and integer in case of age2
+// message variable datatype is string as templete literals always produce strings.
 
 
 
@@ -64,5 +65,8 @@ value = [1, 2, 3];
 
 // Solution:
 // 1: No, this won't compile as it would produce an error
-// 2: To fix it we would assign the dataype of the value 1 to string
-//    i.e let value1: string = "Hello";
+// 2: To fix it we would assign the dataype of the value1 to string
+
+// if(typeof value1 === "string"){
+//     console.log(value1.toUpperCase());
+// }
