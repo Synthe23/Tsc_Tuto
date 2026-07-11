@@ -53,9 +53,9 @@ let user1 = {
     isAdmin: false
 };
 // ? Will these work?
-// user1.age = 22;
-// user1.name = "Rohan";
-// user1.isAdmin = true;
+user1.age = 22;
+user1.name = "Rohan";
+user1.isAdmin = true;
 
 // user1.age = "twenty two";
 // user1.email = "test@gmail.com";
@@ -75,7 +75,31 @@ let user1 = {
 
 
 // ! Q4:
+// ? Which lines are valid?
+let employee: {
+    id: number;
+    name: string;
+    salary: number;
+} = {
+    id: 1,
+    name: "Omm",
+    salary: 50000
+};
 
+employee.salary = 60000;
+employee.name = "Rahul";
+// employee.id = "2";
+// employee.department = "Engineering";
+
+// ! Solution
+// employee.id = "2";
+// employee.department = "Engineering"; 
+// The above two lines are invalid as employee.id only takes number and employee.department doesn't exist.
+// console.log(employee);
+
+
+
+// 
 
 
 
