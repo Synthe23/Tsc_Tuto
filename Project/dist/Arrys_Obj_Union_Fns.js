@@ -99,7 +99,7 @@ let values = [1, "hello", 2, "world"];
 // The above line means the values is an array and take both the number and the string 
 // values.push(true);
 // Above line won't work as it is a boolean datatype and the rest 2 lines would work.
-//!Q7:
+//! Q7:
 //? Which function calls are valid?
 // function greet(name: string) {
 //     return `Hello ${name}`;
@@ -115,3 +115,42 @@ let values = [1, "hello", 2, "world"];
 // greet("Rahul");
 // Above 2 lines are valid
 // ii> Inferred return type of the greet fucntion is a string as it is enclosed in the ``.
+//! Q8:
+//? Predict the output and identify invalid calls. 
+function add(a, b) {
+    return a + b;
+}
+// add(10, 20);
+// add(5.5, 2.5);
+// add("10", "20");
+// add(10);
+// add(10, 20, 30);
+//! Solution:
+// add("10", "20"); 
+// add(10, 20, 30);
+// add(10);
+// The above three lines of code are invalid as one has two string arguments and the other has 3 args but the add() accepts only 2 args.
+//! Q9:
+//? What is the return type here?
+function printId1(id) {
+    return `Your ID is ${id}`;
+}
+//? Will these calls work?
+// printId(101);
+// printId("EMP101");
+// printId(true);
+//! Solution:
+// i> The return type of the function is always a string as it is in templete lietrals
+// printId(101);
+// printId("EMP101");
+// The above two lines will work
+//! Q10:
+//? What is wrong with this code?
+function getLength(value) {
+    return value.length;
+}
+//? Does it compile? If yes, why does TypeScript allow this even though value can be two different types?
+//! Solution:
+// i> I think the error in this code is the value argument which can take both the string or the string array in as args.
+// ii> yes, it compiles 
+console.log(getLength("four"));
