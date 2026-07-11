@@ -1,5 +1,11 @@
 "use strict";
 const counters = {};
-counters['Likes'] = 1;
-counters['Comments'] = 2;
-counters['Shares'] = 100;
+counters["Likes"] = 1;
+counters["Comments"] = 2;
+counters["Shares"] = 100;
+const mm = { likes: 1, views: 200, shares: 23 };
+const priceMap = new Map();
+priceMap.set("likes", 1);
+const lm = {};
+lm["x"] = undefined;
+lm["y"] = 100;
