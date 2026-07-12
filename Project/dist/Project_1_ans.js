@@ -8,7 +8,7 @@ let students = [
     { id: 6, name: "Bignesh", marks: 96, grade: "O" },
     { id: 7, name: "Jyoti", marks: 88, grade: "B" },
 ];
-// Fncction to print all the students
+// Function to print all the students
 function printStudents() {
     for (const student of students) {
         console.log("ID: ", student.id, "|", "Name:", student.name, "|", "Marks:", student.marks, "|", "Grade:", student.grade);
@@ -16,17 +16,17 @@ function printStudents() {
 }
 printStudents();
 // Function to find the student by Id
-function findStudentsById(id) {
-    for (const student of students) {
-        if (id === student.id) {
-            console.log("Student with id", id, "is:", student.name);
-        }
-    }
-    if (id > students.length) {
-        console.log("Invalid ID input!");
-    }
-}
-findStudentsById(3);
+// function findStudentsById(id: number): void {
+//   for (const student of students) {
+//     if (id === student.id) {
+//       console.log("Student with id", id, "is:", student.name);
+//     }
+//   }
+//   if (id > students.length) {
+//     console.log("Invalid ID input!");
+//   }
+// }
+// findStudentsById(3);
 // Function to add a new student
 function addStudent(id, name, marks, grade) {
     for (const student of students) {
@@ -44,12 +44,13 @@ function addStudent(id, name, marks, grade) {
     students.push(newStudent);
     console.log("Student added successfully!");
 }
+addStudent(8, "Synthe", 99, "A");
 // Function to calculate Average marks
-function calculateAverage() {
-    let sum = 0;
-    for (const student of students) {
-        sum += student.marks;
-    }
-    return sum / students.length;
-}
-console.log("Average marks:", calculateAverage().toFixed(1));
+// function calculateAverage(): number {
+//   let sum = 0;
+//   for (const student of students) {
+//     sum += student.marks;
+//   }
+//   return sum / students.length;
+// }
+// console.log("Average marks:", calculateAverage().toFixed(1));

@@ -15,7 +15,7 @@ let students: Student[] = [
   { id: 7, name: "Jyoti", marks: 88, grade: "B" },
 ];
 
-// Fncction to print all the students
+// Function to print all the students
 function printStudents(): void {
   for (const student of students) {
     console.log(
@@ -36,26 +36,25 @@ function printStudents(): void {
 printStudents();
 
 // Function to find the student by Id
-function findStudentsById(id: number): void {
-  for (const student of students) {
-    if (id === student.id) {
-      console.log("Student with id", id, "is:", student.name);
-    }
-  }
-  if (id > students.length) {
-    console.log("Invalid ID input!");
-  }
-}
-findStudentsById(3);
+// function findStudentsById(id: number): void {
+//   for (const student of students) {
+//     if (id === student.id) {
+//       console.log("Student with id", id, "is:", student.name);
+//     }
+//   }
+//   if (id > students.length) {
+//     console.log("Invalid ID input!");
+//   }
+// }
+// findStudentsById(3);
 
 // Function to add a new student
 function addStudent(
   id: string | number,
   name: string,
   marks: number,
-  grade: string
+  grade: "O" | "A" | "B" | "C" | "D" | "F"
 ): void {
-
   for (const student of students) {
     if (id === student.id) {
       console.log("Duplicate ID entries not allowed!");
@@ -69,20 +68,18 @@ function addStudent(
     marks,
     grade,
   };
-
   students.push(newStudent);
-
   console.log("Student added successfully!");
 }
-
+addStudent(8, "Synthe", 99, "A");
 
 // Function to calculate Average marks
-function calculateAverage(): number {
-  let sum = 0;
-  for (const student of students) {
-    sum += student.marks;
-  }
-  return sum / students.length;
-}
+// function calculateAverage(): number {
+//   let sum = 0;
+//   for (const student of students) {
+//     sum += student.marks;
+//   }
+//   return sum / students.length;
+// }
 
-console.log("Average marks:", calculateAverage().toFixed(1));
+// console.log("Average marks:", calculateAverage().toFixed(1));
