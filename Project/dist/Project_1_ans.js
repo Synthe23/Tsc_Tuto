@@ -8,12 +8,14 @@ let students = [
     { id: 6, name: "Bignesh", marks: 96, grade: "O" },
     { id: 7, name: "Jyoti", marks: 88, grade: "B" },
 ];
+// Fncction to print all the students
 function printStudents() {
     for (const student of students) {
         console.log("ID: ", student.id, "|", "Name:", student.name, "|", "Marks:", student.marks, "|", "Grade:", student.grade);
     }
 }
 printStudents();
+// Function to find the student by Id
 function findStudentsById(id) {
     for (const student of students) {
         if (id === student.id) {
@@ -24,7 +26,30 @@ function findStudentsById(id) {
         console.log("Invalid ID input!");
     }
 }
-findStudentsById(50);
-// ID: 1 | Name: Omm | Marks: 87 | Grade: B
-// ID: 2 | Name: Soyam | Marks: 90 | Grade: A
-// ID: 3 | Name: Alok | Marks: 82 | Grade: B
+findStudentsById(3);
+// Function to add a new student
+function addStudent(id, name, marks, grade) {
+    for (const student of students) {
+        if (id === student.id) {
+            console.log("Duplicate ID entries not allowed!");
+            return;
+        }
+    }
+    const newStudent = {
+        id,
+        name,
+        marks,
+        grade,
+    };
+    students.push(newStudent);
+    console.log("Student added successfully!");
+}
+// Function to calculate Average marks
+function calculateAverage() {
+    let sum = 0;
+    for (const student of students) {
+        sum += student.marks;
+    }
+    return sum / students.length;
+}
+console.log("Average marks:", calculateAverage().toFixed(1));
