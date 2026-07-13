@@ -9,3 +9,11 @@ console.log(describeUserExample({ role: "Admin", permissions: ["read"] }));
 const P1N3 = { name: 'John' };
 const P2N3 = { name: 'Ben', contact: { email: 'ben@gmail.com' } };
 const email1N3 = P1N3.contact?.email;
+const email2N3 = P2N3.contact?.email;
+// ?? -> uses the right hand default only when the left hand is null or undefined
+// || -> uses the default when  the left is any falsy value (0, "", null, undefined, NaN)
+const countFromServerN3 = 0;
+const labelFromServerN3 = "";
+const aN3 = countFromServerN3 ?? 100; // keeps the 0
+const bN3 = countFromServerN3 || 100;
+console.log(aN3, bN3); // o/t - 0
