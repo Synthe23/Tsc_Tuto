@@ -4,9 +4,8 @@
 // <T> is a placeholder
 // TS will try to understand what <T> should be
 
-
-function id<T>(x: T): T{
-    return x;
+function id<T>(x: T): T {
+  return x;
 }
 
 // infers T
@@ -16,12 +15,18 @@ function id<T>(x: T): T{
 
 const xyzz = id(5);
 console.log(xyzz + 1); // o/t is 6
-console.log(xyzz + 1, id('Syn_23')); // o/t is 6 Syn_23
-console.log(xyzz + 1, id(['Syn_31'])); // o/t is 6 [ 'Syn_31' ]
+console.log(xyzz + 1, id("Syn_23")); // o/t is 6 Syn_23
+console.log(xyzz + 1, id(["Syn_31"])); // o/t is 6 [ 'Syn_31' ]
 
-
-function firstGen<T>(arr: T[]): T | undefined{
-    return arr[0];
+function firstGen<T>(arr: T[]): T | undefined {
+  return arr[0];
 }
 
 console.log(firstGen([1, 2, 3])); // o/t - 1
+
+// Without generics -> (x: unknown) => unknown
+// with generics: (x: T) => T // keep the exact type
+
+function wrap<T>(value: T): { value: T } {
+    return {value}
+}

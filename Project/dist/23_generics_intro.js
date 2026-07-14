@@ -13,9 +13,14 @@ function id(x) {
 // id <number>(5)
 const xyzz = id(5);
 console.log(xyzz + 1); // o/t is 6
-console.log(xyzz + 1, id('Syn_23')); // o/t is 6 Syn_23
-console.log(xyzz + 1, id(['Syn_31'])); // o/t is 6 [ 'Syn_31' ]
+console.log(xyzz + 1, id("Syn_23")); // o/t is 6 Syn_23
+console.log(xyzz + 1, id(["Syn_31"])); // o/t is 6 [ 'Syn_31' ]
 function firstGen(arr) {
     return arr[0];
 }
 console.log(firstGen([1, 2, 3])); // o/t - 1
+// Without generics -> (x: unknown) => unknown
+// with generics: (x: T) => T // keep the exact type
+function wrap(value) {
+    return { value };
+}
