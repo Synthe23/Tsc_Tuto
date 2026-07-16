@@ -14,3 +14,4 @@ class UserN5 {
 }
 const result4 = new UserN5("1", "Omm");
 const result5 = new UserN5("2", "bunny", "bunnybusiness@gmail.com");
+console.log("Hi");
