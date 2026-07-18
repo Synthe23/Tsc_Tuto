@@ -6,6 +6,8 @@ import {
   Panel,
   RequierdChildrenPanel,
 } from "./components/03_ChildrenReactNode";
+import { Button } from "./components/05_ComponentProps";
+import { Counter } from "./components/06_States";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -32,6 +34,14 @@ function App() {
           </ul>
         }
       />
+
+      <Button
+        variant="primary"
+        onClick={() => alert("Button Clicked!")}
+        style={{textAlign: "center", fontFamily: "monospace"}}
+      >Click me</Button>
+
+      <Counter />
     </>
   );
 }
