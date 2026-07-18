@@ -33,3 +33,4 @@ export function LoaderDemo() {
 
   return <button onClick={fetchData}>{state.status}</button>;
 }
+
